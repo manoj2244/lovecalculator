@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>love calculator/validation</title>
+		<link rel="stylesheet" href="">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<style>
+			*{
+				padding-top: 0;
+				margin: 0;
+				color: white;
+				box-sizing: border-box;
+				letter-spacing: 1px;
+			}
+			body{
+				background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("img/love.jpg") ;
+				background-attachment: fixed;
+					background-repeat: no-repeat;
+					background-position: center center;
+					-webkit-background-size:cover;
+					-moz-background-size:cover;
+					-o-background-size:cover;
+					background-size: cover;
+					opacity: 0.89;
+					height: 100%;
+				width: 98%;
+			}
+			.name{
+				display: flex;
+			}
+			.main-section{
+				margin-left: 25%;
+				margin-top: 30vh;
+			}
+			.heading{
+				background-color: red;
+			width: 72%;
+			text-align: center;
+			padding-top: 12px;
+			padding-bottom: 12px;
+			border-radius: 6px;
+			}
+			span{
+				padding-right: 8px;
+				padding-left: 8px;
+				margin-top: 12px;
+			}
+			.name{
+				margin-left: 147px;
+				margin-top: 20px;
+			}
+			
+			.name1 input{
+				text-align: center;
+				border-radius: 10px;
+				border: 2px solid green;
+				padding: 10px;
+				color: white;
+				background-color: transparent;
+			}
+			.calculate{
+				margin-left: 223px;
+			    margin-top: 25px;
+			}
+			.calculate p{
+				margin-top: 8px;
+			}
+			.calculate button{
+				width: 34%;
+			padding: 0px;
+			font-size: 19px;
+			border: 2px solid green;
+			border-radius: 31px;
+			background: transparent;
+			cursor: pointer;
+			outline: none;
+			}
+			.show{
+				margin-left: 312px;
+		margin-top: 14px;
+			}
+			.show button{
+				padding: 12px 37px;
+			border: 2px solid green;
+			border-radius: 9px;
+				text-align: center;
+			background: transparent;
+				color: white;
+				}
+				
+				.goal{
+					margin-left: 208px;
+					margin-top: 12px;
+					background-color: red;
+					width: 30%;
+					/* padding: 2px; */
+					text-align: center;
+					border-radius: 6px;
+				}
+				.calculate button:hover{
+					background-color: #814694;
+				}
+		</style>
+	</head>
+	<body>
+		<section class="main-section">
+			<div class="heading">LOVE CALCULATOR</div>
+			<div class="name">
+				<div class="name1">
+					<input id="input1" type="text" placeholder="Your Name ">
+				</div>
+				<span>+</span>
+				<div class="name1">
+					<input id="input2"type="text" placeholder="Love Name ">
+				</div>
+			</div>
+			<div class="calculate" >
+				<button onclick="lovecal()"><p >Calculate Love(%)</p></button>
+			</div>
+			<div class="show" >
+				<button id ="cal"><p>Ans%</p></button>
+			</div>
+			<div class="goal"><p>Preety Relationship!! God Bless Both&#10084;&#65039;</p></div>
+		</section>
+		<script>
+			function lovecal()
+			{
+				var x=document.getElementById("input1").value;
+		        var y=document.getElementById("input2").value;
+		        if(x==""&&y=="")
+		        {
+		        	alert("invalid name");
+		        }
+		        else if (x.length<=3) {
+		        	alert("invalid name");
+		        	
+		        }
+		         else if (y.length<=3) {
+		        	alert("invalid name");
+		        }
+		        else if (!isNaN(x)) {
+		        	alert("name must be string");
+		        }
+		        else if (!isNaN(y)) {
+		        	alert("name must be string");
+		        }
+
+
+
+		        else{
+				var love=Math.ceil(Math.random()*100);
+				document.getElementById("cal").innerHTML=love+"%";
+			}
+			}
+		</script>
+	</body>
+</html>
